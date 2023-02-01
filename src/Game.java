@@ -74,7 +74,7 @@ public class Game extends JPanel implements ActionListener
                 if(checkFood())
                 {
                     food_eaten++;
-                    frame.setTitle("Snake Game     SCORE: " + food_eaten);
+                    frame.setTitle("Snake Game   SCORE: " + food_eaten);
                     updateFood();
                 }
                 updateSnakeBody();
@@ -85,7 +85,7 @@ public class Game extends JPanel implements ActionListener
                 x.clear();
                 y.clear();
                 food_eaten = 0;
-                frame.setTitle("Snake Game     SCORE: " + food_eaten);
+                frame.setTitle("Snake Game   SCORE: " + food_eaten);
                 head_x = WIDTH/(DOT * 2);
                 head_y = WIDTH/(DOT * 2);
                 left = false;
