@@ -15,19 +15,13 @@ public class Game extends JPanel implements ActionListener
     int HEIGHT = 500;
     int DOT = 10;
     int DELAY = 200;
-
     int head_x = WIDTH/(DOT * 2);
     int head_y = WIDTH/(DOT * 2);
-
-    int prev_head_x;
-    int prev_head_y;
-
     ArrayList<Integer> x = new ArrayList<>();
     ArrayList<Integer> y = new ArrayList<>();
 
     int x_limit = WIDTH/DOT;
     int y_limit = WIDTH/DOT;
-
     boolean IS_ALIVE = true;
     boolean left = false;
     boolean right = true;
@@ -39,18 +33,13 @@ public class Game extends JPanel implements ActionListener
     Image snake_food;
     Image snake_head;
     Image snake_tail;
-
     int food_x = head_x + 5;
     int food_y = head_y;
     int food_eaten = 0;
-
     boolean justEaten = false;
-
     static JFrame frame = new JFrame();
     public Game() throws IOException
     {
-        prev_head_x = head_x;
-        prev_head_y = head_y;
         r = new Random();
         addKeyListener(new SnakeAdapter());
         setBackground(Color.BLACK);
